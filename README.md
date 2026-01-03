@@ -1,7 +1,7 @@
 # CTRLVirtuwall
-# Verificador CTRL Virtuwall
 
-![Ícone da Aplicação](https://i.imgur.com/gA3qjHw.png) Ferramenta de diagnóstico profissional desenvolvida em C# (WPF) para auditar a infraestrutura de rede de um cliente antes da implantação do sistema Barco CTRL.
+
+! Ferramenta de diagnóstico profissional desenvolvida em C# (WPF) para auditar a infraestrutura de rede de um cliente antes da implantação do sistema Barco CTRL.
 
 Esta aplicação gera um "atestado" rápido, validando se todos os pré-requisitos críticos de rede (DHCP, DNS e NTP) estão configurados corretamente, ajudando a prevenir falhas de implantação no local do cliente.
 
@@ -11,16 +11,16 @@ Esta aplicação gera um "atestado" rápido, validando se todos os pré-requisit
 
 Esta ferramenta é 100% independente dos serviços locais do Windows para garantir um teste de rede verdadeiro:
 
-* **Interface Gráfica Nativa:** Uma interface limpa, profissional e responsiva (WPF .NET 8) sem dependências externas de UI.
-* **Verificação de DHCP (100% Independente):** Envia um pacote `DHCPINFORM` (Broadcast) para consultar o servidor DHCP diretamente pelas Opções de rede, em vez de confiar no que o Windows *acha* que recebeu.
+ **Interface Gráfica Nativa:** Uma interface limpa, profissional e responsiva (WPF .NET 8) sem dependências externas de UI.
+ **Verificação de DHCP (100% Independente):** Envia um pacote `DHCPINFORM` (Broadcast) para consultar o servidor DHCP diretamente pelas Opções de rede, em vez de confiar no que o Windows *acha* que recebeu.
     * Valida a **Opção 6 (Servidor DNS)**.
     * Valida a **Opção 15 (Sufixo de Domínio)**.
     * Valida a **Opção 42 (Servidor NTP)**.
-* **Verificação de DNS (Independente):** Consulta o servidor DNS (fornecido pela Opção 6) diretamente, ignorando o cache de DNS do Windows, para:
+ **Verificação de DNS (Independente):** Consulta o servidor DNS (fornecido pela Opção 6) diretamente, ignorando o cache de DNS do Windows, para:
     * Resolver o **Registo A** (Host).
     * Resolver o **Registo SRV** (_barcomanagement._tcp...).
-* **Verificação de NTP (Independente):** Envia um pacote SNTP para o servidor NTP (fornecido pela Opção 42) para confirmar que ele está online e a responder na porta 123 (UDP), ignorando o serviço de Tempo do Windows.
-* **Relatório Detalhado:** Fornece um log claro e em tempo real com ícones de status (✓, ❌, ⚠️) e um "Cartão de Status" final (APROVADO / REPROVADO).
+ **Verificação de NTP (Independente):** Envia um pacote SNTP para o servidor NTP (fornecido pela Opção 42) para confirmar que ele está online e a responder na porta 123 (UDP), ignorando o serviço de Tempo do Windows.
+ **Relatório Detalhado:** Fornece um log claro e em tempo real com ícones de status (✓, ❌, ⚠️) e um "Cartão de Status" final (APROVADO / REPROVADO).
 
 ---
 
