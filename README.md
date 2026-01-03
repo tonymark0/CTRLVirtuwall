@@ -8,7 +8,7 @@ Esta aplicação gera um "atestado" rápido, validando se todos os pré-requisit
 
 ## Funcionalidades Principais
 
-Esta ferramenta é 100% independente dos serviços locais do Windows para garantir um teste de rede verdadeiro:
+Esta ferramenta é 100% independente dos serviços locais do Windows para garantir um teste de rede verdadeiro.
 
  **Interface Gráfica Nativa:** Uma interface limpa, profissional e responsiva (WPF .NET 8) sem dependências externas de UI.
  
